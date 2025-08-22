@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import React from "react";
 
 import Header from "@//components/header";
@@ -6,6 +6,8 @@ import colors from "@//styles/colors";
 import Title from "@//components/title";
 import { styles } from "@//components/title/style";
 import Promo from "@//components/promo";
+import CategoryList from "@//components/categoryList";
+import ProductList from "@//components/productList";
 
 export default function index() {
   {
@@ -17,10 +19,15 @@ export default function index() {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: colors.gray[800],
+
           }}
         >
-          <Title>Titulo</Title>
-          <Promo urlImage="https://picsum.photos/200/300" />
+          <ScrollView>
+            <Title word="Título" />
+            <Promo urlImage="https://picsum.photos/200/300" />
+            <CategoryList />
+            <ProductList />
+          </ScrollView>
         </View>
       </>
     );

@@ -5,7 +5,6 @@ import Header from "../components/header";
 import Feather from "@expo/vector-icons/Feather";
 import colors from "../styles/colors";
 
-
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -29,9 +28,25 @@ export default function Layout() {
             ),
           }}
         />
-
+        <Drawer.Screen
+          name="category/index"
+          options={{
+            title: "Categorias",
+            drawerIcon: ({ color, size }) => (
+              <Feather name="grid" size={size} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="product/index"
+          options={{
+            title: "Produtos",
+            drawerIcon: ({ color, size }) => (
+              <Feather name="box" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
-
   );
 }

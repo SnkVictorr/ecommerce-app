@@ -12,7 +12,7 @@ export default function CategoryItem({ name }: CategoryItemProps) {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.CategoryItem}
-        onPress={() => router.push(`/category/index`)}>
+        onPress={() => router.push("/category")}
       >
         <Text>{name}</Text>
       </TouchableOpacity>

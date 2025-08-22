@@ -8,10 +8,10 @@ export const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   title: {
+    alignSelf: "center",
     color: colors.white,
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "left",
     marginVertical: 20,
   },
 });

@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
   CategoryItem: {
     padding: 12,
-
+    backgroundColor: colors.gray[200],
     borderBottomColor: colors.gray[200],
     borderRadius: 12,
     marginRight: 12,
