@@ -1,57 +1,13 @@
 import { Text, View, Image, FlatList } from "react-native";
 import React from "react";
 import { styles } from "./style";
-import ProductItem2 from "../productItem";
-import colors from "@//styles/colors";
+import ProductItem2 from "../productItem2";
 
-type Product = {
-  id: number;
-  nome: string;
-  preco: number;
-  imagem: string;
-};
+import { products } from "../productList";
 
 // Dados simulados das categorias, "data.ts ou data.json"
-export const products: Product[] = [
-  {
-    id: 1,
-    nome: "Smartphone Galaxy S21",
-    preco: 799.99,
-    imagem: "https://picsum.photos/200/100",
-  },
-  {
-    id: 2,
-    nome: "Fone de Ouvido Bluetooth",
-    preco: 199.99,
-    imagem: "https://picsum.photos/100/100",
-  },
-  {
-    id: 3,
-    nome: "Smartwatch",
-    preco: 499.99,
-    imagem: "https://picsum.photos/100/100",
-  },
-  {
-    id: 4,
-    nome: "Tablet",
-    preco: 299.99,
-    imagem: "https://picsum.photos/100/100",
-  },
-  {
-    id: 5,
-    nome: "Câmera Digital",
-    preco: 899.99,
-    imagem: "https://picsum.photos/100/100",
-  },
-  {
-    id: 6,
-    nome: "Drone",
-    preco: 1499.99,
-    imagem: "https://picsum.photos/100/100",
-  },
-];
 
-export default function ProductList() {
+export default function ProductList2() {
   return (
     <View>
       <Text
@@ -68,7 +24,6 @@ export default function ProductList() {
       <FlatList
         style={styles.list} // Estilo da lista
         data={products} // Onde os dados são passados como array na props data
-        horizontal // para deixar a lista na posição horizontal
         showsHorizontalScrollIndicator={false} // para esconder a barra de rolagem
         keyExtractor={(item) => item.id.toString()} // para extrair a chave de cada item
         renderItem={({ item }) => (
