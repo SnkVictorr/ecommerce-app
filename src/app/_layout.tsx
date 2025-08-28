@@ -46,6 +46,15 @@ export default function Layout() {
             ),
           }}
         />
+        <Drawer.Screen
+          name="productDetail/[id]"
+          options={{
+            title: "Detalhes",
+            drawerIcon: ({ color, size }) => (
+              <Feather name="info" size={size} color={color} />
+            ),
+          }}
+        />
       </Drawer>
     </GestureHandlerRootView>
   );
