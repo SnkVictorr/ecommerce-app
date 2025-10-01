@@ -30,7 +30,7 @@ export default function ProductItem2({
         <View>
           <Image source={{ uri: imagem }} style={styles.image} />
           <Text style={styles.title}>{nome}</Text>
-          <Text style={styles.price}>{`R$ ${preco.toFixed(2)}`}</Text>
+          <Text style={styles.price}>{`R$ ${preco}`}</Text>
         </View>
       </TouchableOpacity>
     </View>
