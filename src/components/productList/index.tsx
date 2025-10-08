@@ -96,7 +96,7 @@ export default function ProductList() {
           <ProductItem2
             nome={item.produto}
             preco={item.preco}
-            imagem={item.imagem}
+            image={`http://10.63.45.59:8000/produtos/imagens/${item.imagem}`}
             id={item.id_produto.toString()}
           />
         )} // para renderizar cada item da lista

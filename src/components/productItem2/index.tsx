@@ -6,14 +6,14 @@ import { router } from "expo-router";
 type ProductItemProps = {
   nome: string;
   preco: number;
-  imagem: string;
+  image: string;
   id: string;
 };
 
 export default function ProductItem2({
   nome,
   preco,
-  imagem,
+  image,
   id,
 }: ProductItemProps) {
   return (
@@ -28,7 +28,16 @@ export default function ProductItem2({
         }
       >
         <View>
-          <Image source={{ uri: imagem }} style={styles.image} />
+          <Image
+            source={{
+              uri: image,
+              headers: {
+                Authorization:
+                  "stNOJvYxgbX3bRg3CEGMTNiqnIO3TMMHPi8K3ehLzk3KqcN3tJbDnBdMwWvAj84r2fiKvaAxQC58i1BsR5iqjBzzscwMudNv8xL6",
+              },
+            }}
+            style={styles.image}
+          />
           <Text style={styles.title}>{nome}</Text>
           <Text style={styles.price}>{`R$ ${preco}`}</Text>
         </View>

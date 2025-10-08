@@ -9,6 +9,7 @@ import Promo from "@//components/promo";
 import CategoryList from "@//components/categoryList";
 import ProductList from "@//components/productList";
 import ProductList2 from "@//components/productList2";
+import FormClient from "@//components/formClient/login";
 
 export default function index() {
   {
@@ -22,13 +23,15 @@ export default function index() {
             backgroundColor: colors.gray[800],
           }}
         >
-          <ScrollView>
+          {/* <ScrollView>
             <Title word="Título" />
             <Promo urlImage="https://picsum.photos/200/300" />
             <CategoryList />
             <ProductList />
             <ProductList2 />
-          </ScrollView>
+          </ScrollView> */}
+          {/* <FormClient />, */}
+          
         </View>
       </>
     );
