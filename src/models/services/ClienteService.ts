@@ -20,11 +20,14 @@ export class ClienteService extends ApiService<Cliente> {
     return data.data;
   }
 
-  async getAll(): Promise<Cliente[]> {
-    const response = await fetch(this._baseUrl, {
-      method: "GET",
-      headers: this._headers,
-    });
+  async getAll(email?: string, password?: string): Promise<Cliente[]> {
+    const response = await fetch(
+      `http://10.63.45.59:8080/clientes/?email=${email}&password=${password}`,
+      {
+        method: "GET",
+        headers: this._headers,
+      }
+    );
     if (!response.ok) {
       throw new Error("Erro ao buscar clientes");
     }

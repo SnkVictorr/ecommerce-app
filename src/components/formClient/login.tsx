@@ -17,12 +17,10 @@ const FormLogin: React.FC = () => {
 
   const onPressLogin = async () => {
     try {
-      const _clientes = await _clienteService.getAll();
+      const _clientes = await _clienteService.getAll(email, senha);
       console.log(_clientes);
-      const _usuario = _clientes.find(
-        (cliente) => cliente.email === email && cliente.senha === senha
-      );
-      if (_usuario) {
+
+      if (_clientes) {
         setResult("Login realizado com sucesso!");
         router.replace("/(tabs)");
         // setResult(_usuario.loginUsuario());
