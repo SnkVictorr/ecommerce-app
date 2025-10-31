@@ -23,15 +23,14 @@ export default function index() {
             backgroundColor: colors.gray[800],
           }}
         >
-          {/* <ScrollView>
+          <ScrollView>
             <Title word="Título" />
             <Promo urlImage="https://picsum.photos/200/300" />
             <CategoryList />
             <ProductList />
             <ProductList2 />
-          </ScrollView> */}
-          {/* <FormClient />, */}
-          
+          </ScrollView>
+          <FormClient />
         </View>
       </>
     );
