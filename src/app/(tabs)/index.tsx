@@ -10,6 +10,7 @@ import CategoryList from "@//components/categoryList";
 import ProductList from "@//components/productList";
 import ProductList2 from "@//components/productList2";
 import FormClient from "@//components/formClient/login";
+import SignGoogle from "@//components/signGoogle";
 
 export default function index() {
   {
@@ -25,10 +26,12 @@ export default function index() {
         >
           <ScrollView>
             <Title word="Título" />
+            <SignGoogle text="Continuar com Google" loading={false} />
             <Promo urlImage="https://picsum.photos/200/300" />
             <CategoryList />
             <ProductList />
             <ProductList2 />
+            
           </ScrollView>
           <FormClient />
         </View>
