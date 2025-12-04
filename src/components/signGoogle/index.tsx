@@ -9,6 +9,7 @@ import {
 import { FontAwesome } from "@expo/vector-icons";
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
+import * as AuthSession from "expo-auth-session";
 
 type SignGoogleProps = {
   onPress?: () => void;
@@ -33,7 +34,14 @@ export function SignGoogle({
       "494615575471-ug8kmt37rdetkj5av66o5tfnaol6le4s.apps.googleusercontent.com",
     androidClientId:
       "494615575471-toimg76j3qejsnu46e93age3u5i04t1b.apps.googleusercontent.com",
+    redirectUri: AuthSession.makeRedirectUri({
+      scheme: "ecommerceapp",
+    }),
   });
+  // ✅ lugar perfeito para ver o redirect
+  React.useEffect(() => {
+    console.log("Redirect URI:", AuthSession.makeRedirectUri());
+  }, []);
 
   React.useEffect(() => {
     if (response?.type === "success") {
